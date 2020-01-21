@@ -1,20 +1,19 @@
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-
+# Копирование массива (создание нессылочной версии)
 
-A = [1,2,3,4,5]
-def CopyArray(arr):
+A = [1, 2, 3, 4, 5]
+
+
+def copy_array(arr):
     """
         arr - input array - list
     """
-    B = [0]*len(arr)
+    B = [0] * len(arr)
     for n in range(len(arr)):
         B[n] = A[n]
-    return(B)
-
-print(CopyArray(A))
+    return B
 
 
-
+print(copy_array(A))
 
 # IMPORTANT
 # Если сделать как ниже, получается ссылка => меняем А и меняется C

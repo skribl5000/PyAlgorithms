@@ -1,11 +1,10 @@
-from __future__ import print_function
+# Перевод в различные системы счисления из десятичной
 
-x = 1234
-base = 10 
 
-while x > 0:
-    digit = x % base
-    print(digit, end ='')
-    x = x // base
+def number_system(x, base):
+    if x <= 0:
+        return ''
+    return str(number_system(x//base, base)) + str(x % base)
 
-# почему-то выводит наоборот
+
+print(number_system(1000, 10))
